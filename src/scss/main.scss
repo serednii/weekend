@@ -1,20 +1,26 @@
 // базовые подключения
-@use 'sass:map';
-@import "vars";
+
+@import "_vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
-
+@import "vendor";
 
 // подключения компонентов страницы
+@import "./components/logo";
 @import "./components/header";
 @import "./components/footer";
+@import "../pug/components/socials/socials";
+@import "../pug/components/menu_footer/menu-footer";
+
 
 
 // тестовые стили, удалите их
 body {
   // min-height: 100vh;
   // overflow: hidden;
+  font-family: "interRegular", sans-serif;
+  ;
 }
 
 html,
@@ -29,14 +35,12 @@ body {
 }
 
 .main {
-  // flex: 1 0 auto;
   margin-bottom: auto;
 }
 
 h1 {
   line-height: 3rem;
 }
-
 
 // .burger {
 //   @include burger;
