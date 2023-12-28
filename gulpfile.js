@@ -10,6 +10,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob') // позволяет использовать /**/*.scss конструкцию
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const gulpPug = require('gulp-pug');
@@ -149,6 +150,10 @@ const styles = () => {
         message: "Error: <%= error.message %>"
       })
     ))
+    .pipe(
+      sassGlob({
+      }),
+    ) // проходит по всем файлам в scss, подключенным через шаблон /**/*
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
@@ -171,6 +176,10 @@ const stylesBackend = () => {
         message: "Error: <%= error.message %>"
       })
     ))
+    .pipe(
+      sassGlob({
+      }),
+    ) // проходит по всем файлам в scss, подключенным через шаблон /**/*
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,

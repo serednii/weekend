@@ -7,20 +7,20 @@
 @import "vendor";
 
 // подключения компонентов страницы
-@import "./components/logo";
-@import "./components/header";
-@import "./components/footer";
-@import "../pug/components/socials/socials";
-@import "../pug/components/menu_footer/menu-footer";
+// @import "./components/logo";
+// @import "./components/header";
+// @import "./components/footer";
+// @import "../pug/components/socials/socials";
+// @import "../pug/components/menu_footer/menu-footer";
 
-
+@import "./components/**/*.scss";
+@import "../pug/components/**/*.scss";
 
 // тестовые стили, удалите их
 body {
   // min-height: 100vh;
   // overflow: hidden;
   font-family: "interRegular", sans-serif;
-  ;
 }
 
 html,
