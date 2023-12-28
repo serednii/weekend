@@ -42,6 +42,6 @@ html.no-js(lang="en")
       block footer
         include ../parts/footer.pug
 
-    //- block scripts
-      //- script(src="./js/main.js?v=" + siteVersion, type="module")
+    block scripts
+      script(src="./js/main.js?v=" + siteVersion, type="module")
         
