@@ -1,2 +1,70 @@
 header.header
-  
+    .container
+        .header__wrapper 
+            .header__top 
+                img.header__logo.logo(src="./img/logo.png", alt="logo")
+                .header__search
+                    +search()
+                .header__menu(data-menu)
+                    +menu-header()
+                .header__account
+                    button.header__account-btn Sign in 
+                    button.header__account-btn Create free account
+                    button.header__account-icon 
+                         +icon("sign_in")(width="24", height="24")
+                    button.header__account-icon 
+                         +icon("create_account")(width="24", height="24")
+                    .header__account-burger.burger(data-burger)
+                        span.burger__line 
+            .header__main
+                +icon("create_account")(width="24", height="24")
+                +icon("create_account")(width="24", height="24")
+                +icon("create_account")(width="24", height="24")
+                +icon("create_account")(width="24", height="24")
+                .header__main-about
+                    .header__main-about-img
+                        +pictureWebp("/img/picture@1x.jpg", "/img/picture-tablet@1x.jpg", "/img/picture-desktop@1x.jpg")
+                    +icon("create_account")(width="24", height="24")
+                    .header__main-circle
+                    .header__main-card-video
+                        p
+                            span 2K+
+                            Video Courses
+                    .header__main-card-online
+                        p
+                            span 5K+
+                            Online Courses
+                    .header__main-card-tutors
+                        p
+                            Tutors
+                            span 250+
+
+                .header__main-content 
+                    h1.header__main-title 
+                        | up your 
+                        span skills
+                        | to 
+                        span advance your 
+                        span career 
+                        | path
+                    p.header__main-text 
+                    .header__main-buttons
+                        button.header__main-btn 
+                        button.header__main-btn 
+                    ul.header__main-communication-wrapper     
+                        li.header__main-communication-speaker Public Speaking
+                        li.header__main-communication-oriented Career-Oriented
+                        li.header__main-communication-creative Creative Thinking
+                    .header__main-partner 
+                        .header__main-partner-number 
+                            p.header__main-partner-text 
+                                span 250+
+                                Collaboration
+                        ul.header__main-partner-socials 
+                            li.header__main-partner-social
+                            li.header__main-partner-social
+                            li.header__main-partner-social
+                            li.header__main-partner-social
+
+
+

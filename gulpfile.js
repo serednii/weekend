@@ -9,6 +9,7 @@ const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
+const sassGlob = require('gulp-sass-glob') // позволяет использовать /**/*.scss конструкцию
 const gulpSass = require('gulp-sass');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
@@ -149,6 +150,10 @@ const styles = () => {
         message: "Error: <%= error.message %>"
       })
     ))
+    .pipe(
+      sassGlob({
+      }),
+    ) // проходит по всем файлам в scss, подключенным через шаблон /**/*
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,

@@ -7,12 +7,8 @@
 @import "vendor";
 
 // подключения компонентов страницы
-@import "./components/logo";
-@import "./components/header";
-@import "./components/footer";
-@import "../pug/components/socials/socials";
-@import "../pug/components/menu_footer/menu-footer";
-
+@import "./components/**/*.scss";
+@import "../pug/components/**/*.scss";
 
 
 // тестовые стили, удалите их
