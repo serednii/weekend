@@ -91,20 +91,19 @@
         font-size: $fs-24;
         @include interMedium;
         margin-bottom: 20px;
-
     }
 
-    // &__card-content-container {
-    //     display: flex;
-    //     flex-direction: column;
-    //     max-height: 5em;
-    //     overflow: hidden;
-    // }
+    &__card-content-container {
+        //     display: flex;
+        //     flex-direction: column;
+        //     max-height: 5em;
+        //     overflow: hidden;
+    }
 
     &__card-content {
+        -webkit-line-clamp: 3;
         // flex-grow: 1;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }

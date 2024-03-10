@@ -4,11 +4,17 @@
     "stylelint-config-rational-order"
   ],
   "plugins": [
-    "stylelint-scss"
+    "stylelint-order"
+
   ],
   "rules": {
+    "indentatyion": [
+      "tab"
+    ],
+    "color-hex-case": "upper",
     "at-rule-no-unknown": null,
     "scss/at-if-no-null": null,
+
     "scss/at-rule-no-unknown": [
       true,
       {

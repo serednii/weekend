@@ -11,7 +11,7 @@ import { enableScroll } from './enable-scroll'
   body.addEventListener('click', e => {
     if (!e.target.closest('.header__menu') && !e.target.closest('.burger')) {
       // eslint-disable-next-line no-unused-expressions
-      menu.classList.contains('.menu--active') && hiddenMenu()
+      menu.classList.contains('menu--active') && hiddenMenu()
     }
   })
 
