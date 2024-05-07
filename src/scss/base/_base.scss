@@ -1,0 +1,94 @@
+// @use "sass:math";
+@import "../variables";
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+  html,
+  body {
+    min-height: 100vh;
+    min-width: 320px;
+    height: 100%;
+    font-family: "interRegular", sans-serif;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.title {
+  font-size: $fs-36;
+  font-family: "interSemiBold", sans-serif;
+}
+
+.about-main,
+.contact-main {
+  padding-top: $spaceSectionBottom;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  margin-bottom: auto;
+}
+
+
+
+section {
+  margin-bottom: $spaceSectionBottom;
+}
+
+@media (max-width: 650px){
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .about-main,
+  .contact-main {
+    padding-top: 50px;
+  }
+
+}
+
